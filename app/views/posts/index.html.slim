@@ -1,0 +1,12 @@
+h2 Listing posts
+
+- @posts.each do |post|
+  h3 = post.title
+  p = post.content
+  div
+    b Author:
+    = post.user_id
+
+
+
+= link_to 'New Post', new_post_path, class: 'btn btn-default' 
