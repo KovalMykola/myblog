@@ -1,0 +1,8 @@
+- @post.comments.each do |comment|
+	div
+	  b Commenter
+	  '
+	  = comment.commenter
+	  p = comment.body
+
+	  = link_to 'Delete Comment', [comment.post, comment], class: 'btn btn-default', method: :delete, data: { confirm: 'Are you sure?' }
