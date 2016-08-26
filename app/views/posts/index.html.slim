@@ -9,11 +9,11 @@ h2 Listing posts
 	 
     p
     '
-    = link_to 'Show', post, class: 'btn btn-default btn-xs' 
+    = link_to 'Show', post, class: 'btn btn-info btn-xs' 
     ' 
-    = link_to 'Edit', edit_post_path(post), class: 'btn btn-default btn-xs' 
+    = link_to 'Edit', edit_post_path(post), class: 'btn btn-warning btn-xs' 
     '
-    = link_to 'Destroy', post, class: 'btn btn-default btn-xs', method: :delete, data: { confirm: 'Are you sure?' }
+    = link_to 'Destroy', post, class: 'btn btn-danger btn-xs', method: :delete, data: { confirm: 'Are you sure?' }
 
 
-= link_to 'New Post', new_post_path, class: 'btn btn-default' 
+= link_to 'New Post', new_post_path, class: 'btn btn-primary' 
