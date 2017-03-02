@@ -1,17 +1,12 @@
 = form_for([@post, @post.comments.build]) do |f| 
 
-  div class="form-group"
-  div class = "col-sm-2 control-label"
-  .field
-     p class="form-control-static"
-       = f.label :commenter
-     div class="col-sm-10"
-     = f.text_field :commenter 
+  .form-group
+    .field
+      = f.label :commenter
+      = f.text_field :commenter, class: "form-control" 
   
-  .field
-	 p class="form-control-static"
-	   = f.label :body 
-	 div class="col-sm-10"
-	 = f.text_area :body 
+    .field
+	    = f.label :body 
+	    = f.text_area :body, class: "form-control" 
 	  
   .actions = f.submit class: 'btn btn-primary'

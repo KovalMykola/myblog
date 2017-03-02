@@ -1,12 +1,9 @@
 class CommentsController < ApplicationController
   
-
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create(comment_params)
     #redirect_to post_path(@post)
-
- 
    
     respond_to do |format|
       if @comment.save
@@ -17,8 +14,6 @@ class CommentsController < ApplicationController
         format.json { render json: @post.comments.build.errors, status: :unprocessable_entity }
       end
     end
-   
-
   end
  
   def destroy
